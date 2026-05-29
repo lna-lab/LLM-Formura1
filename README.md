@@ -79,6 +79,7 @@ See **[PARTNERS.md](PARTNERS.md)**. Reach the people optimizing the future of in
 | | |
 |---|---|
 | 📕 [REGULATIONS.md](REGULATIONS.md) | Sporting & technical rulebook (v1.1‑draft) |
+| 🌍 [HOMOLOGATION.md](HOMOLOGATION.md) | The constructors' grid — the world's open‑weight engines by class & nation |
 | 📐 [MEASUREMENT.md](MEASUREMENT.md) | The binding measurement standard (Energy‑of‑Record, tiers, reproduction) |
 | ⚙️ [BULLETIN-1.md](BULLETIN-1.md) | The adversarial integrity review that hardened v1.0 → v1.1 |
 | 🏁 [ENTRY.md](ENTRY.md) | How to compete + result‑manifest schema |
