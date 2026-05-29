@@ -56,4 +56,4 @@ top-1 + logit + distributional gates (Art. 6) run **steward-side** with referenc
 ```
 
 > ⚠️ Self-reported numbers are provisional. The leaderboard figure of record is the
-> steward's median-of-3 on the sealed hold-out. 正答性 > 速度.
+> steward's median-of-3 on the sealed hold-out. Correctness before speed.

@@ -117,16 +117,16 @@ footer{{color:var(--mut);font-size:.85rem;margin:50px 0 30px;border-top:1px soli
 </style></head><body>
 <header><div class="wrap">
 <h1>🏁 LLM <span class="f">Formula</span></h1>
-<p class="tag">The World Championship of Inference Efficiency · 推論効率の世界選手権</p>
-<p class="motto">🔥 お前のトークンで札束を燃やすな。情熱を燃やせ。
-<small>Don't burn cash with your tokens — burn passion. · The cleverest joule wins.</small></p>
+<p class="tag">The World Championship of Inference Efficiency</p>
+<p class="motto">🔥 Don't burn cash with your tokens — burn passion.
+<small>The cleverest joule wins.</small></p>
 <div class="classes-row">
 <div class="chip"><b>GP1000</b> ≤1000 W · the iconic flagship</div>
 <div class="chip"><b>GP400</b> ≤400 W · the grid</div>
 <div class="chip"><b>E50</b> ≤50 W · the edge</div>
 </div>
 <p class="note">Headline metric: <b>tokens / joule</b> at the wall. Any vendor, any interconnect —
-Apple Silicon, AMD, CPU, NVIDIA all first-class. Correctness-gated (正答性 &gt; 速度).</p>
+Apple Silicon, AMD, CPU, NVIDIA all first-class. Correctness-gated (correctness before speed).</p>
 </div></header>
 <div class="wrap">
 <p class="note">{n} provisional entries · steward-verified results are set on a held-out sealed slice.</p>

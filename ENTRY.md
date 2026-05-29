@@ -12,7 +12,7 @@ A run only counts when it is **correct, metered, and reproducible**. Here is the
 Tune anything: kernels, quantized matmul, **batching / continuous batching**, parallel topology (TP/PP/EP/DP), **clock & power policy** (DVFS), **speculative / multi-token decoding**. The only rule is the correctness gate below.
 
 ## 3. Pass scrutineering (correctness gate — Art. 6)
-On the round's **sealed prompt set**, at temperature 0, achieve **≥ 99% top‑1 token agreement** with the reference — or pass the round's eval suite within **≤ 1.0%** degradation. *No time counts until you pass.* 正答性 > 速度.
+On the round's **sealed prompt set**, at temperature 0, achieve **≥ 99% top‑1 token agreement** with the reference — or pass the round's eval suite within **≤ 1.0%** degradation. *No time counts until you pass.* Correctness before speed.
 
 ## 4. Measure (Art. 7)
 - **Energy of record = wall joules** from a calibrated meter (preferred). If no meter, document an auditable software method (e.g., integrated board power + stated host overhead); meter results outrank software results.
