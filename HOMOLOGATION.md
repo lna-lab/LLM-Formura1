@@ -17,20 +17,23 @@ whole open‑weight world.
 > Flags = the engine's lab of origin. Versions are **forward‑looking targets**; each is
 > confirmed at its round's homologation bulletin (see "How an engine is homologated").
 
-### 🏁 GP1000 — Grand Prix (≤ 1 000 W) · the flagship MoEs
-| Engine | Lab · Origin |
-|---|---|
-| **DeepSeek‑V4** | DeepSeek · 🇨🇳 |
-| **Nemotron‑3 Ultra** | NVIDIA · 🇺🇸 |
-| **MiniMax‑3.0** | MiniMax · 🇨🇳 |
-| **Kimi‑K2.6** | Moonshot AI · 🇨🇳 |
-| **GLM‑5.1** | Zhipu / Z.ai · 🇨🇳 |
+### 🏁 GP1000 — Grand Prix (≤ 1 000 W) · the flagships
+| Engine | Lab · Origin | Note |
+|---|---|---|
+| **DeepSeek‑V4** | DeepSeek · 🇨🇳 | sparse MoE |
+| **Nemotron‑3 Ultra** | NVIDIA · 🇺🇸 | |
+| **MiniMax‑3.0** | MiniMax · 🇨🇳 | |
+| **Kimi‑K2.6** | Moonshot AI · 🇨🇳 | |
+| **GLM‑5.1** | Zhipu / Z.ai · 🇨🇳 | |
+| **Mistral‑Medium‑3.5** | Mistral · 🇫🇷 | **the Dense champion** — taking the dense fight to the giant MoEs |
 
 ### ⚙️ GP400 — the grid (≤ 400 W) · single‑GPU / Mac / capped multi‑GPU
 | Engine | Lab · Origin |
 |---|---|
 | **Gemma‑4** | Google · 🇺🇸 |
 | **Qwen3.6** | Alibaba · 🇨🇳 |
+| **llm‑jp‑4** | LLM‑jp (NII) · 🇯🇵 |
+| **Nemotron‑3** | NVIDIA · 🇺🇸 |
 | **Mistral Small** (candidate) | Mistral · 🇫🇷 |
 
 ### 🔋 E50 — Edge (≤ 50 W) · laptops / Apple Silicon / Jetson
@@ -40,9 +43,10 @@ whole open‑weight world.
 | **LFM2.5‑8B‑A1B** | Liquid AI · 🇺🇸 |
 | **Ministral 3B** (candidate) | Mistral · 🇫🇷 |
 
-> 🌍 **The flags tell the story.** China (DeepSeek, MiniMax, Kimi, GLM, Qwen), the USA
-> (Nemotron, Gemma, Liquid), France (Mistral). Rival nations' engines on one grid, raced
-> by privateers everywhere. *That* is the show.
+> 🌍 **The flags tell the story.** China 🇨🇳 (DeepSeek, MiniMax, Kimi, GLM, Qwen), the USA 🇺🇸
+> (Nemotron, Gemma, Liquid), France 🇫🇷 (Mistral — Dense flagship *and* edge), Japan 🇯🇵 (llm‑jp).
+> Rival nations' engines on one grid — sparse MoE giants vs the Dense champion, raced by
+> privateers everywhere. *That* is the show.
 
 ## How an engine is homologated (Art. 5.1)
 
