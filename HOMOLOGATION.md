@@ -25,6 +25,7 @@ whole open‑weight world.
 | **MiniMax‑3.0** | MiniMax · 🇨🇳 | |
 | **Kimi‑K2.6** | Moonshot AI · 🇨🇳 | |
 | **GLM‑5.1** | Zhipu / Z.ai · 🇨🇳 | |
+| **Step‑3.7 Flash** | StepFun · 🇨🇳 | sparse MoE 198B/11B‑active · **first multimodal entry** (image+video) · 256k ctx · NVFP4 ckpt |
 | **Mistral‑Medium‑3.5** | Mistral · 🇫🇷 | **the Dense champion** — taking the dense fight to the giant MoEs |
 
 ### ⚙️ GP400 — the grid (≤ 400 W) · single‑GPU / Mac / capped multi‑GPU
@@ -43,10 +44,14 @@ whole open‑weight world.
 | **LFM2.5‑8B‑A1B** | Liquid AI · 🇺🇸 |
 | **Ministral 3B** (candidate) | Mistral · 🇫🇷 |
 
-> 🌍 **The flags tell the story.** China 🇨🇳 (DeepSeek, MiniMax, Kimi, GLM, Qwen), the USA 🇺🇸
+> 🌍 **The flags tell the story.** China 🇨🇳 (DeepSeek, MiniMax, Kimi, GLM, Qwen, StepFun), the USA 🇺🇸
 > (Nemotron, Gemma, Liquid), France 🇫🇷 (Mistral — Dense flagship *and* edge), Japan 🇯🇵 (llm‑jp).
 > Rival nations' engines on one grid — sparse MoE giants vs the Dense champion, raced by
 > privateers everywhere. *That* is the show.
+>
+> 🎥 **Multimodal on the horizon.** Step‑3.7 Flash brings native image+video — seeding a
+> future **multimodal discipline** (tokens/joule on vision+language), once the gate and
+> reference fingerprint (Art. 6) are defined for multimodal I/O.
 
 ## How an engine is homologated (Art. 5.1)
 
