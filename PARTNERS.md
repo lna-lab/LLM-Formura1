@@ -31,7 +31,7 @@ The open **DwarfStar4** engine serves as the reference scrutineering harness (pe
 
 - Open an Issue in this repository titled **`[Partner] <your organization>`**, or
 - Contact **Lna‑Lab** (Series Director: Tonoken3). 
-- Proposals for hosting **Round 1** and naming the **GT300 / E50 homologated engines** are open now.
+- Proposals for hosting **Round 1** and naming the **GP400 / E50 homologated engines** are open now.
 
 LLM Formula は **持続可能で効率的なAI推論** の世界舞台です。GPU/アクセラレータ、電源・冷却、クラウド/データセンター各社のテクニカルパートナー、タイトル協賛、そして世界中の才能を支える**プライベーター支援基金**を広く募集します。数字はすべてスチュワードが再現検証する——だからこそ、ここに名を連ねることは「厳密さ」と並ぶことです。ご連絡は本リポジトリのIssue、または Lna‑Lab まで。
 

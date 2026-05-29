@@ -5,7 +5,7 @@
 A run only counts when it is **correct, metered, and reproducible**. Here is the whole procedure.
 
 ## 1. Pick a class and engine
-- Choose your **Class** by your sustained wall-power budget: **GP1000** (≤1 000 W, PCIe-only), **GT300** (≤300 W, PCIe-only), **E50** (≤50 W). No unlimited class — the flagship runs on one domestic outlet anywhere. See [REGULATIONS](REGULATIONS.md) Art. 4.
+- Choose your **Class** by your sustained whole‑system wall‑power budget: **GP1000** (≤1 000 W, the iconic halo class), **GP400** (≤400 W, the practical grid — Macs, single big card, capped multi‑GPU), **E50** (≤50 W, edge/battery). Any vendor, any interconnect — Apple Silicon/AMD/CPU welcome. See [REGULATIONS](REGULATIONS.md) Art. 4 & [MEASUREMENT.md](MEASUREMENT.md).
 - Run the round's **homologated engine** (model + exact weights, by SHA‑256). See Art. 5.
 
 ## 2. Build your stack (the chassis is free)
@@ -29,7 +29,7 @@ Open a Pull Request adding `results/<season>/<class>/<your-handle>.json`, or ope
   "season": 2026,
   "round": 1,
   "discipline": "efficiency",            // "pace" | "efficiency" | "endurance"
-  "class": "GP1000",                      // "GP1000" | "GT300" | "E50"
+  "class": "GP1000",                      // "GP1000" | "GP400" | "E50"
   "entrant": { "handle": "lna-lab", "privateer": true, "team": null },
   "engine": {
     "name": "DeepSeek-V4-Flash",

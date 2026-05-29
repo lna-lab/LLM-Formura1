@@ -1,0 +1,5 @@
+{"id": "geo-1", "prompt": "What is the capital of France? Answer in one short sentence.", "reference": "The capital of France is Paris.", "answer_span": "Paris"}
+{"id": "math-1", "prompt": "Compute 17 + 26. Reply with only the number.", "reference": "43", "answer_span": "43"}
+{"id": "math-2", "prompt": "What is 12 multiplied by 12? Reply with only the number.", "reference": "144", "answer_span": "144"}
+{"id": "fact-1", "prompt": "In what year did the first human land on the Moon? Reply with only the year.", "reference": "1969", "answer_span": "1969"}
+{"id": "lang-1", "prompt": "Translate to French, one word: cat", "reference": "chat", "answer_span": "chat"}

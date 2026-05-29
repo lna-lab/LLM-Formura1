@@ -1,0 +1,11 @@
+# local secrets — never commit
+.env
+*.key
+credentials*
+# python
+__pycache__/
+*.pyc
+# local measurement artifacts
+watts.csv
+result.json
+*.nsys-rep

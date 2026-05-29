@@ -1,8 +1,10 @@
 # LLM Formula — Sporting & Technical Regulations
 
-**Season 1 (2026) · Issued 2026‑05‑29 by Lna‑Lab · Version 1.0**
+**Season 1 (2026) · Issued 2026‑05‑29 by Lna‑Lab · Version 1.1‑draft**
 
-*These Regulations are the rulebook of the LLM Formula World Championship. They are written in the spirit of the FIA International Sporting Code: precise, public, and amendable by published bulletin. Offered openly under CC BY 4.0.*
+*These Regulations are the rulebook of the LLM Formula World Championship, in the spirit of the FIA International Sporting Code: precise, public, and amendable by published bulletin. Offered openly under CC BY 4.0.*
+
+> **⚙️ Hardened by adversarial review.** v1.0 was red‑teamed by an independent panel and found gameable; **[BULLETIN-1.md](BULLETIN-1.md)** records the holes and the controlling amendments to Articles 6 (correctness) & 7 (measurement), and **[MEASUREMENT.md](MEASUREMENT.md)** is the binding measurement standard. Where Bulletin 1 / MEASUREMENT.md refine an Article below, the bulletin text governs. Items marked ⚑ await founder ratification.
 
 ---
 
@@ -42,28 +44,30 @@ LLM Formula exists to advance, measure, and celebrate **efficient large-language
 
 4.1 **Classes are defined by the sustained system power cap measured at the wall.** There is no unlimited / works-only class. **By design, every class — including the flagship — must be runnable by an individual, in any country, from a single domestic mains outlet.** This is the founding principle of the series: the World Champion may live in a bedroom, not a datacenter.
 
-| Class | Wall power cap | Interconnect rule | Spirit |
-|---|---|---|---|
-| **GP1000 — Grand Prix** | ≤ 1 000 W | **PCIe-only** (no NVLink/NVSwitch/proprietary fabric) | The flagship. 1 kW fits a single domestic circuit **anywhere on Earth** (e.g. Japan 100 V/15 A, US 120 V/15 A, EU 230 V) — so the top class is open to every individual, not just server rooms. |
-| **GT300** | ≤ 300 W | **PCIe-only** | The efficiency midfield — a single prosumer GPU or a power-capped multi-GPU rig. |
-| **E50 — Edge** | ≤ 50 W | single-node (on-package / PCIe) | Laptops, Apple Silicon, Jetson, power-capped single accelerators. The eco extreme. |
+| Class | Wall power cap | Spirit |
+|---|---|---|
+| **GP1000 — Grand Prix** | ≤ 1 000 W | The iconic halo flagship. The open big‑power class; the stage to chase the future **1000‑TPS single‑stream era** the name looks ahead to. |
+| **GP400 — the grid** | ≤ 400 W | The practical heart of the series — a Mac Studio, a single 96 GB workstation card, a power‑capped multi‑GPU rig. Where most privateers race. |
+| **E50 — Edge** | ≤ 50 W | Laptops, Apple Silicon on battery, Jetson, power‑capped single accelerators. |
 
-4.2 **Why 1 000 W is the ceiling.** A continuous ~1 kW draw is within a single household outlet/circuit in essentially every country (the binding case being 100 V/15 A Japan, ~1 500 W circuit, comfortably clearing 1 kW). Capping the top class here guarantees the Championship is **globally accessible to private individuals** and keeps the contest about engineering, not electrical-service privilege.
+4.2 **The "1000" is a double meaning.** 1000 W is a draw a single domestic circuit can deliver in essentially every country (the binding case being Japan 100 V/15 A, ~1 500 W circuit). **And 1000 also names the 1000‑TPS single‑stream horizon** the championship drives toward — the iconic number of the flagship. The practical centre of gravity is **GP400** and **E50**, runnable by any individual; **GP1000** is the glamour at the top. **GP400 sits at 400 W specifically so no single product defines a class** (a 300 W workstation card races there with 100 W of company — Macs, dual small GPUs — never a one‑make series).
 
-4.3 **Interconnect restriction (GP1000 & GT300).** Links faster than PCIe between accelerators — NVLink, NVSwitch, or any proprietary high-bandwidth fabric — are **prohibited** in these classes. Competition rides on consumer/prosumer interconnect, so all-reduce/all-to-all bandwidth is a shared, level constraint (the reference rig is itself PCIe-only). E50 is effectively single-node and the rule is moot.
+4.3 **No interconnect or vendor restriction (withdrawn).** Any interconnect or topology is permitted; **Apple Silicon (UltraFusion), AMD APUs (Infinity Fabric), monolithic GPUs, and CPU/unified‑memory rigs are first‑class.** Only **watts (Art 4.4) and correctness (Art 6)** are regulated. *(A name‑based NVLink ban was considered and withdrawn as architecture‑specific — it taxed only NVIDIA discrete multi‑GPU while on‑package fabrics ran free. Power already bounds the system; any future comms limit must be a measured, vendor‑neutral bandwidth number.)*
 
-4.4 **Power measurement.** The cap is the sustained wall power **averaged over the Run**; exceeding it at any 1-second sample by >5% is a black flag for that Run. An entrant may declare a cap **below** their class ceiling to contest Efficiency at a chosen operating point; the declared cap is then binding for that Run.
+4.4 **Power measurement & the cap** (full instrument/test spec in [MEASUREMENT.md](MEASUREMENT.md) §4). The cap is on **true (real) whole‑system wall power**. Two binding tests: (i) the **Active‑Window average** ≤ class cap; (ii) a **hard ceiling** — P99.9 of 100 ms samples and the max of 1 s rolling averages both ≤ cap (brief sub‑100 ms transients tolerated to 1.15× only if over‑cap energy < 2 % of the run). **Workload‑shaping or idle‑padding to depress the average voids the Run.** A logged power time‑series is attached for record runs. An externally‑caused supply trip is a **no‑fault re‑run**. An entrant may declare a cap below the class ceiling; it is then binding.
 
-4.5 **Spec-Engine** vs **Open-Engine**: the main Championship is contested on the Spec Engine for the round (Article 5). Open-Engine exhibition results may be listed but score no Championship points in Season 1.
+4.5 **Spec‑Engine** vs **Open‑Engine**: the main Championship is contested on the Spec Engine for the round (Article 5). Open‑Engine exhibition results may be listed but score no Championship points in Season 1.
 
 ## ARTICLE 5 — HOMOLOGATION (THE SPEC ENGINE)
 
-5.1 Each round names one or more **homologated engines** (model + exact weights file) with a published **SHA‑256 checksum**, tokenizer, and reference decoding configuration.
+5.1 Each round homologates one or more **engines by a REFERENCE OUTPUT + LOGITS FINGERPRINT** on the sealed inputs (a frozen, per‑round artifact at pinned fp32‑logit deterministic precision), **not** by a single weight‑file SHA. The format‑neutral source of truth is a bit‑defined master (e.g. safetensors BF16) **plus a written quantization spec**. *Any* quantization realization (ggml q2/GGUF, TensorRT INT4‑AWQ, MLX 4‑bit, …) is legal **provided it passes Art 6 against the reference logits** — the championship is vendor‑ and runtime‑neutral.
 5.2 Inaugural homologation list (Season 1):
-   - **GP1000 flagship:** *DeepSeek‑V4‑Flash* (q2‑imatrix GGUF) — the reference MoE engine.
-   - **GT300 / E50:** lightweight homologated engines (e.g. ≤ ~4 B active) to be named on the homologation bulletin, so single-GPU, Apple-Silicon, and edge privateers can race.
-5.3 The model weights are **frozen**. Re-quantization, distillation, or fine-tuning of the homologated weights is **not** permitted in the Spec-Engine Championship (it changes the engine). Lossless repacking that preserves bit-exact dequantized weights is permitted and must be declared.
-5.4 The **chassis is free**: any kernels, runtime, batching scheme, parallel topology, clock/power policy, or speculative-decoding method may be used, provided Article 6 (Scrutineering) is satisfied.
+   - **GP1000 flagship:** *DeepSeek‑V4‑Flash* (the reference MoE engine; q2‑imatrix GGUF is one permitted realization).
+   - **Privateer tier (binding):** every round MUST also homologate a **GP400 engine runnable in ≤ 24 GB VRAM (single consumer GPU) AND a unified‑memory/CPU variant in ≤ 128 GB RAM (Apple Silicon, AMD APU, CPU)** — **both scoring full championship points** — so a bedroom privateer or a Mac genuinely contests the grid. The cheap single‑device build is published in [ENTRY.md](ENTRY.md).
+   - **E50:** a ≤ ~4 B‑active homologated engine for laptops / Apple Silicon on battery / Jetson.
+5.3 The model's **learned weights are frozen** — no distillation or fine‑tuning. **Re‑quantization to a different scheme IS permitted** insofar as Art 6 is passed (so ggml, TensorRT, MLX compete on equal terms); only altering the trained weights is barred. Lossless repacking must be declared.
+5.4 The **chassis is free**: any kernels, runtime, batching, parallel topology, clock/power policy, or speculative‑decoding method, provided Article 6 (Scrutineering) is satisfied **byte‑identically to the timed run** (Art 11.6).
+5.5 **Engine licensing.** Each homologated engine cites its upstream model license + AUP, links the canonical source, and confirms homologation/derivative‑quant/redistribution/benchmark‑publication are permitted; otherwise entrants obtain weights directly from the source. Entrants attest weights‑license compliance in the manifest.
 
 ## ARTICLE 6 — SCRUTINEERING (THE CORRECTNESS GATE)
 

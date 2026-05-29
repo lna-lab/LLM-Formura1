@@ -42,17 +42,19 @@ You do not need the biggest cluster. You need the best engineering.
 
 ## The Classes — a power formula / クラス（電力フォーミュラ）
 
-Classes are defined by **sustained wall power** — our equivalent of the fuel-flow regulation. There is **no unlimited / works-only class**: by design every class, including the flagship, is runnable by **an individual, in any country, from a single domestic mains outlet.** The World Champion may live in a bedroom, not a datacenter.
+Classes are defined by **sustained wall power** (the true whole‑system AC draw — see [MEASUREMENT.md](MEASUREMENT.md)) — our equivalent of the fuel‑flow regulation. There is **no unlimited / works‑only class**: by design every class is runnable by **an individual, in any country, from a single domestic mains outlet.** The World Champion may live in a bedroom, not a datacenter. **Apple Silicon, AMD, Jetson and CPU rigs are first‑class** — there is no interconnect or vendor restriction; only watts and correctness are regulated.
 
-| Class | 電力上限 Power cap | 接続 Interconnect | 想定 Who |
-|---|---|---|---|
-| **GP1000 — Grand Prix** | ≤ 1 000 W | **PCIe-only** | 家庭の壁コンセント1つで世界中どこでも引ける上限。マルチGPUプライベーターの最高峰 |
-| **GT300** | ≤ 300 W | **PCIe-only** | 単プロシューマGPU / 電力制限マルチGPU。効率の中堅 |
-| **E50 — Edge** | ≤ 50 W | single-node | ノート、Apple Silicon、Jetson、電力制限の単機。エコの極北 |
+| Class | 電力上限 Power cap | 想定 Who |
+|---|---|---|
+| **GP1000 — Grand Prix** | ≤ 1 000 W | The iconic halo class. The open big‑power flagship; the place to chase the future **1000 TPS** single‑stream era. |
+| **GP400 — the grid** | ≤ 400 W | The practical heart of the series: a Mac Studio, a single big card (e.g. 96 GB workstation), a power‑capped multi‑GPU rig. Where most privateers actually race. |
+| **E50 — Edge** | ≤ 50 W | Laptops, Apple Silicon on battery, Jetson, power‑capped single accelerators. The eco extreme. |
 
-> **Why 1 kW?** A continuous ~1 kW draw fits one household circuit **everywhere** — even Japan's 100 V/15 A (~1.5 kW) clears it. So the *top* class is open to every individual on Earth, not just server rooms. NVLink and proprietary fabric are banned in GP1000/GT300 — you race on consumer PCIe. (なぜ1000Wか：どの国の個人でも家庭の商用電力で参戦できるように。)
+> **Why the "1000"?** It is a double meaning. 1000 W is a power any household circuit can deliver **anywhere** (even Japan's 100 V/15 A). And **1000 also looks ahead to the 1000‑TPS single‑stream era** we are driving toward — the iconic number the flagship is named for. Most racing happens in **GP400** and **E50**; GP1000 is the glamour at the top. (「1000」は1kW上限であると同時に、いつか到達する単騎1000 TPS時代の象徴。)
 >
-> Reference rig **DwarfStar4** (7× RTX PRO 2000 Blackwell, PCIe, ~490 W board active) races in **GP1000**.
+> **GP400 exists so no single product owns a class** — a 300 W workstation card competes there, but with 100 W of company (Macs, dual small GPUs), so it never becomes a one‑make series.
+>
+> Reference rig **DwarfStar4** (7× RTX PRO 2000 Blackwell, ~490 W board) races in **GP1000**.
 
 ---
 
@@ -82,9 +84,22 @@ LLM Formula は、**持続可能で効率的なAI** と、それを支えるエ�
 
 ---
 
+## Repository / リポジトリ
+
+| | |
+|---|---|
+| 📕 [REGULATIONS.md](REGULATIONS.md) | Sporting & technical rulebook (v1.1‑draft) |
+| 📐 [MEASUREMENT.md](MEASUREMENT.md) | The binding measurement standard (Energy‑of‑Record, tiers, reproduction) |
+| ⚙️ [BULLETIN-1.md](BULLETIN-1.md) | The adversarial integrity review that hardened v1.0 → v1.1 |
+| 🏁 [ENTRY.md](ENTRY.md) | How to compete + result‑manifest schema |
+| 🤝 [PARTNERS.md](PARTNERS.md) | Technical partners, sponsors, privateer support fund |
+| 🔧 [tools/llmf-bench/](tools/llmf-bench/) | The one‑command measurement harness (OpenAI‑compatible) |
+| 📊 [tools/build_site.py](tools/build_site.py) → `site/` | Static leaderboard generator ([DEPLOY.md](DEPLOY.md)) |
+| 📁 [results/](results/) | Result manifests → the leaderboard |
+
 ## Status / 現況
 
-- **Season 1 (2026)** — charter & regulations published 2026‑05‑29. Inaugural rounds, homologation list, and the public leaderboard are opening now.
+- **Season 1 (2026)** — charter & regulations published 2026‑05‑29, then **hardened by an independent adversarial review** ([BULLETIN-1.md](BULLETIN-1.md)): v1.0 was found gameable and rebuilt to v1.1. Integrity‑first rollout — rules + measurement standard now; provisional Round 1 shakedown next.
 - Founder & Series Director: **Tonoken3 / Lna‑Lab**.
 - Technical supervision & measurement methodology: **Claude Opus 4.8** (the reference scrutineering harness is built on the open **DwarfStar4** engine).
 
