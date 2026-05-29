@@ -3,7 +3,8 @@
 ### The World Championship of Inference Efficiency
 
 > # 🔥 Don't burn cash with your tokens — burn passion.
-> <sub>*founder's original: 「お前のトークンで札束を燃やすな。情熱を燃やせ。」*</sub>
+> ### *« Brûlez la passion, pas les billets. »*
+> <sub>The championship motto, in the language of the FIA.</sub>
 
 *The privateer's creed: you don't win by buying the biggest cluster. You win by engineering the cleverest joule.*
 

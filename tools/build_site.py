@@ -119,7 +119,7 @@ footer{{color:var(--mut);font-size:.85rem;margin:50px 0 30px;border-top:1px soli
 <h1>🏁 LLM <span class="f">Formula</span></h1>
 <p class="tag">The World Championship of Inference Efficiency</p>
 <p class="motto">🔥 Don't burn cash with your tokens — burn passion.
-<small>The cleverest joule wins.</small></p>
+<small>&laquo; Br&ucirc;lez la passion, pas les billets. &raquo; · the cleverest joule wins.</small></p>
 <div class="classes-row">
 <div class="chip"><b>GP1000</b> ≤1000 W · the iconic flagship</div>
 <div class="chip"><b>GP400</b> ≤400 W · the grid</div>

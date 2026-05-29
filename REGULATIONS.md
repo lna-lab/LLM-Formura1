@@ -11,6 +11,7 @@
 ## PREAMBLE
 
 > **Don't burn cash with your tokens — burn passion.**
+> *« Brûlez la passion, pas les billets. »*
 
 LLM Formula exists to advance, measure, and celebrate **efficient large-language-model inference**. The Championship rewards engineering that converts the most useful tokens from the fewest joules, at honest, reproducible, correctness-gated conditions. No competitor may gain advantage by degrading the model's output: in this sport, **a car that does not pass scrutineering does not set a time** (correctness before speed).
 
