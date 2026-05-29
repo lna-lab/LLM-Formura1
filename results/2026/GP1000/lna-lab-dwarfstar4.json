@@ -1,0 +1,51 @@
+{
+  "schema": "llmf-result/1",
+  "season": 2026,
+  "round": 0,
+  "discipline": "efficiency",
+  "class": "GP1000",
+  "entrant": { "handle": "lna-lab", "privateer": true, "team": "Lna-Lab" },
+  "engine": {
+    "name": "DeepSeek-V4-Flash",
+    "weights_file": "DeepSeek-V4-Flash-IQ2XXS-w2Q2K-AProjQ8-SExpQ8-OutQ8-chat-v2-imatrix.gguf",
+    "weights_sha256": "pending",
+    "tokenizer": "deepseek-v4-flash",
+    "lossless_repack": false
+  },
+  "chassis": { "name": "DwarfStar4", "version": "git:5dd80d1", "open_source": true },
+  "hardware": {
+    "gpus": "7x NVIDIA RTX PRO 2000 Blackwell 16GB (SM 12.0)",
+    "interconnect": "PCIe5, no NVLink (single NUMA)",
+    "host": "AMD EPYC 48-core, 1TB RAM, CUDA 13.2",
+    "notes": "Pipeline-parallel PP-7, single-stream batch-1 decode, greedy."
+  },
+  "workload": {
+    "context_len": 512,
+    "concurrency": 1,
+    "temperature": 0,
+    "sealed_set_id": "founding-reference (self-reported)"
+  },
+  "measurement": {
+    "energy_method": "software-board (nvidia-smi power.draw summed over 7 GPUs)",
+    "meter": "nvidia-smi -lms 300, 47 snapshots, PID-alive verified across window",
+    "tokens": 1500,
+    "wall_seconds": 80.5,
+    "joules_wall": 13326.0,
+    "avg_system_watts": 165.55,
+    "idle_watts": 51.59,
+    "avg_sm_clock_mhz": 2065,
+    "avg_gpu_util_pct": 14.5
+  },
+  "results": {
+    "tokens_per_second": 18.63,
+    "tokens_per_joule": 0.1126,
+    "tokens_per_joule_dynamic": 0.1635,
+    "correctness_top1_agreement": 1.0
+  },
+  "output_sha256": "n/a (reference baseline)",
+  "reproduction": {
+    "recipe_url": "github.com/Tonoken3/DS4-For-SM120 (DwarfStar4 engine, PP-7)",
+    "steward_verified": false,
+    "notes": "Founding reference / provisional pole. Energy is board-power (software) per Art. 7.2; a wall-meter figure will supersede it. Roadmap targets single-stream ~40 t/s and aggregate 1000+ t/s under batching."
+  }
+}
